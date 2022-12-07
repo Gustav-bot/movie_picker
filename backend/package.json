@@ -1,0 +1,23 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"echo 'no test'\"",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "server"
+  ],
+  "author": "gustav-bot",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.2.1",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
