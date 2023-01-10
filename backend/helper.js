@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-
+//maybe change this to a group of arrays instead of one long array.
 async function getMoviesFromDB(){
     movies = await multipleApiCall(4)
     movies = movies.map((response) => response.data)

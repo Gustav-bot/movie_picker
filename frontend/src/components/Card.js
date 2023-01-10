@@ -29,17 +29,15 @@ import React from 'react';
 const Swiper = (props) => {
   const {moviesToSwipe} = props;
 
-  const onSwipe = (direction) => {
-    console.log('You swiped: ' + direction);
-  };
-
+  console.log(moviesToSwipe[0], 'in swiper');
+  const onSwipe = props.onSwipe;
   return (
     <div className='cardContainer'>
       {moviesToSwipe.map((movie) => {
         return (
           <TinderCard className='swipe' onSwipe={onSwipe} key = {movie.id} onCardLeftScreen={props.onSwipe}>
             <div style = {{backgroundImage: 'url(' + 'https://image.tmdb.org/t/p/w500' + movie.backdrop_path + ')'}} className='card'>
-              <h3 className='element'>{movie.title}</h3>
+              <h3 className='movieName'>{movie.title}</h3>
             </div>
           </TinderCard>
         );

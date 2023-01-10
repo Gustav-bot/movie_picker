@@ -1,6 +1,9 @@
 const helper = require('./helper.js')
 const express = require('express')
 const app = express()
+const cors = require('cors')
+
+app.use(cors())
 
 let movies = []
 helper().then((response) => movies = response)
@@ -11,7 +14,7 @@ app.get('/', (request, response) => {
 })
 
 app.get('/api/movies', (request, response) => {
-  
+  console.log(movies, 'backend')
   return response.json(movies)
 })
 
